@@ -6,8 +6,9 @@ import streamlit as st
 import sys
 import os
 
-# Add parent directory to path for imports
-sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+# Add VitalFlow directory to path for imports
+vitalflow_dir = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+sys.path.insert(0, vitalflow_dir)
 
 try:
     from config.google_auth import GoogleOAuthConfig, SimpleGoogleAuth

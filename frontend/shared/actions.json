@@ -1,0 +1,20 @@
+{
+  "actions": [
+    {
+      "id": "ACT64B06EBA",
+      "type": "PUNCH_IN",
+      "staff_id": "D001",
+      "timestamp": "2026-02-01T02:47:07.305965",
+      "data": {},
+      "is_synced": false
+    },
+    {
+      "id": "ACT7A7AFCB2",
+      "type": "PUNCH_IN",
+      "staff_id": "D001",
+      "timestamp": "2026-02-01T04:47:41.242856",
+      "data": {},
+      "is_synced": false
+    }
+  ]
+}
