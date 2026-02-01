@@ -1,0 +1,964 @@
+{
+  "timestamp": "2026-02-01T05:57:04.819426",
+  "patients": {
+    "P001": {
+      "id": "P001",
+      "name": "Ramesh Kumar",
+      "age": 58,
+      "gender": "Unknown",
+      "diagnosis": "Acute MI",
+      "status": "Critical",
+      "spo2": 82.0,
+      "heart_rate": 150,
+      "blood_pressure": "120/80",
+      "temperature": 98.6,
+      "bed_id": "ICU-01",
+      "assigned_doctor_id": "D001",
+      "assigned_nurse_id": "N001",
+      "admission_time": "2026-02-01 05:54:49.096674",
+      "eta_minutes": null,
+      "ambulance_id": null,
+      "priority": 1,
+      "notes": []
+    },
+    "P002": {
+      "id": "P002",
+      "name": "Priya Singh",
+      "age": 35,
+      "gender": "Unknown",
+      "diagnosis": "Pneumonia",
+      "status": "Serious",
+      "spo2": 89.0,
+      "heart_rate": 115,
+      "blood_pressure": "120/80",
+      "temperature": 98.6,
+      "bed_id": "ICU-02",
+      "assigned_doctor_id": "D002",
+      "assigned_nurse_id": "N002",
+      "admission_time": "2026-02-01 05:54:49.129105",
+      "eta_minutes": null,
+      "ambulance_id": null,
+      "priority": 2,
+      "notes": []
+    },
+    "P003": {
+      "id": "P003",
+      "name": "Amit Verma",
+      "age": 45,
+      "gender": "Unknown",
+      "diagnosis": "Post-surgery",
+      "status": "Stable",
+      "spo2": 96.0,
+      "heart_rate": 78,
+      "blood_pressure": "120/80",
+      "temperature": 98.6,
+      "bed_id": "GEN-01",
+      "assigned_doctor_id": "D003",
+      "assigned_nurse_id": "N001",
+      "admission_time": "2026-02-01 05:54:49.156655",
+      "eta_minutes": null,
+      "ambulance_id": null,
+      "priority": 3,
+      "notes": []
+    },
+    "P-055632": {
+      "id": "P-055632",
+      "name": "Trauma Patient 1",
+      "age": 48,
+      "gender": "Female",
+      "diagnosis": "Multiple fractures, internal bleeding",
+      "status": "Critical",
+      "spo2": 88.0,
+      "heart_rate": 130,
+      "blood_pressure": "117/80",
+      "temperature": 100.77461055734467,
+      "bed_id": "ICU-03",
+      "assigned_doctor_id": "D001",
+      "assigned_nurse_id": "N002",
+      "admission_time": "2026-02-01 05:56:32.068992",
+      "eta_minutes": null,
+      "ambulance_id": null,
+      "priority": 1,
+      "notes": []
+    },
+    "P-055634": {
+      "id": "P-055634",
+      "name": "Trauma Patient 2",
+      "age": 32,
+      "gender": "Male",
+      "diagnosis": "Severe head injury",
+      "status": "Critical",
+      "spo2": 90.0,
+      "heart_rate": 55,
+      "blood_pressure": "107/63",
+      "temperature": 101.5740690225685,
+      "bed_id": null,
+      "assigned_doctor_id": "D002",
+      "assigned_nurse_id": "N001",
+      "admission_time": "2026-02-01 05:56:34.206898",
+      "eta_minutes": null,
+      "ambulance_id": null,
+      "priority": 1,
+      "notes": []
+    },
+    "P-055636": {
+      "id": "P-055636",
+      "name": "Burn Victim 1",
+      "age": 37,
+      "gender": "Female",
+      "diagnosis": "40% burns",
+      "status": "Critical",
+      "spo2": 85.0,
+      "heart_rate": 140,
+      "blood_pressure": "118/77",
+      "temperature": 101.379299121939,
+      "bed_id": null,
+      "assigned_doctor_id": "D003",
+      "assigned_nurse_id": "N002",
+      "admission_time": "2026-02-01 05:56:36.318138",
+      "eta_minutes": null,
+      "ambulance_id": null,
+      "priority": 1,
+      "notes": []
+    },
+    "P-055638": {
+      "id": "P-055638",
+      "name": "Cardiac Patient 1",
+      "age": 47,
+      "gender": "Female",
+      "diagnosis": "Post-cardiac arrest",
+      "status": "Critical",
+      "spo2": 92.0,
+      "heart_rate": 45,
+      "blood_pressure": "84/66",
+      "temperature": 101.44950877656804,
+      "bed_id": null,
+      "assigned_doctor_id": "D001",
+      "assigned_nurse_id": "N001",
+      "admission_time": "2026-02-01 05:56:38.415855",
+      "eta_minutes": null,
+      "ambulance_id": null,
+      "priority": 1,
+      "notes": []
+    },
+    "P-055640": {
+      "id": "P-055640",
+      "name": "Spinal Patient 1",
+      "age": 56,
+      "gender": "Male",
+      "diagnosis": "Spinal cord injury",
+      "status": "Serious",
+      "spo2": 95.0,
+      "heart_rate": 100,
+      "blood_pressure": "87/62",
+      "temperature": 101.81022838716589,
+      "bed_id": "GEN-02",
+      "assigned_doctor_id": "D002",
+      "assigned_nurse_id": "N002",
+      "admission_time": "2026-02-01 05:56:40.525357",
+      "eta_minutes": null,
+      "ambulance_id": null,
+      "priority": 2,
+      "notes": []
+    },
+    "P-055642": {
+      "id": "P-055642",
+      "name": "Pediatric Patient 1",
+      "age": 45,
+      "gender": "Female",
+      "diagnosis": "Multiple injuries, shock",
+      "status": "Critical",
+      "spo2": 86.0,
+      "heart_rate": 150,
+      "blood_pressure": "110/66",
+      "temperature": 101.48850197148857,
+      "bed_id": "ER-01",
+      "assigned_doctor_id": "D003",
+      "assigned_nurse_id": "N001",
+      "admission_time": "2026-02-01 05:56:42.634283",
+      "eta_minutes": null,
+      "ambulance_id": null,
+      "priority": 1,
+      "notes": []
+    }
+  },
+  "beds": {
+    "ICU-01": {
+      "id": "ICU-01",
+      "bed_type": "ICU",
+      "ward": "ICU Ward",
+      "floor": 1,
+      "is_occupied": true,
+      "patient_id": "P001",
+      "last_sanitized": null
+    },
+    "ICU-02": {
+      "id": "ICU-02",
+      "bed_type": "ICU",
+      "ward": "ICU Ward",
+      "floor": 1,
+      "is_occupied": true,
+      "patient_id": "P002",
+      "last_sanitized": null
+    },
+    "ICU-03": {
+      "id": "ICU-03",
+      "bed_type": "ICU",
+      "ward": "ICU Ward",
+      "floor": 1,
+      "is_occupied": true,
+      "patient_id": "P-055632",
+      "last_sanitized": null
+    },
+    "ER-01": {
+      "id": "ER-01",
+      "bed_type": "Emergency",
+      "ward": "Emergency Ward",
+      "floor": 1,
+      "is_occupied": true,
+      "patient_id": "P-055642",
+      "last_sanitized": "2026-02-01 05:56:42.634791"
+    },
+    "ER-02": {
+      "id": "ER-02",
+      "bed_type": "Emergency",
+      "ward": "Emergency Ward",
+      "floor": 1,
+      "is_occupied": false,
+      "patient_id": null,
+      "last_sanitized": null
+    },
+    "GEN-01": {
+      "id": "GEN-01",
+      "bed_type": "General",
+      "ward": "General Ward",
+      "floor": 1,
+      "is_occupied": true,
+      "patient_id": "P003",
+      "last_sanitized": null
+    },
+    "GEN-02": {
+      "id": "GEN-02",
+      "bed_type": "General",
+      "ward": "General Ward",
+      "floor": 1,
+      "is_occupied": true,
+      "patient_id": "P-055640",
+      "last_sanitized": null
+    },
+    "GEN-03": {
+      "id": "GEN-03",
+      "bed_type": "General",
+      "ward": "General Ward",
+      "floor": 1,
+      "is_occupied": false,
+      "patient_id": null,
+      "last_sanitized": null
+    },
+    "GEN-04": {
+      "id": "GEN-04",
+      "bed_type": "General",
+      "ward": "General Ward",
+      "floor": 1,
+      "is_occupied": false,
+      "patient_id": null,
+      "last_sanitized": null
+    }
+  },
+  "staff": {
+    "D001": {
+      "id": "D001",
+      "name": "Dr. Sharma",
+      "role": "Doctor",
+      "status": "Busy",
+      "shift_start": "2026-02-01 05:54:49.043181",
+      "current_patient_ids": [
+        "P001",
+        "P-055632",
+        "P-055638"
+      ],
+      "phone": "",
+      "specialization": "Cardiology",
+      "floor_assigned": null
+    },
+    "D002": {
+      "id": "D002",
+      "name": "Dr. Patel",
+      "role": "Doctor",
+      "status": "Busy",
+      "shift_start": "2026-02-01 05:54:49.055858",
+      "current_patient_ids": [
+        "P002",
+        "P-055634",
+        "P-055640"
+      ],
+      "phone": "",
+      "specialization": "Emergency",
+      "floor_assigned": null
+    },
+    "D003": {
+      "id": "D003",
+      "name": "Dr. Kumar",
+      "role": "Doctor",
+      "status": "Busy",
+      "shift_start": "2026-02-01 05:54:49.069671",
+      "current_patient_ids": [
+        "P003",
+        "P-055636",
+        "P-055642"
+      ],
+      "phone": "",
+      "specialization": "Pulmonology",
+      "floor_assigned": null
+    },
+    "N001": {
+      "id": "N001",
+      "name": "Nurse Priya",
+      "role": "Nurse",
+      "status": "Busy",
+      "shift_start": "2026-02-01 05:54:49.079019",
+      "current_patient_ids": [
+        "P001",
+        "P003",
+        "P-055634",
+        "P-055638",
+        "P-055642"
+      ],
+      "phone": "",
+      "specialization": "",
+      "floor_assigned": null
+    },
+    "N002": {
+      "id": "N002",
+      "name": "Nurse Anita",
+      "role": "Nurse",
+      "status": "Busy",
+      "shift_start": "2026-02-01 05:54:49.090141",
+      "current_patient_ids": [
+        "P002",
+        "P-055632",
+        "P-055636",
+        "P-055640"
+      ],
+      "phone": "",
+      "specialization": "",
+      "floor_assigned": null
+    }
+  },
+  "decision_log": [
+    {
+      "timestamp": "2026-02-01T05:55:40.540775",
+      "action": "AMBULANCE_REGISTERED",
+      "reason": "Ambulance AMB-TRAUMA-04 registered. ETA: 8 min. Patient: Amputation case - Traumatic limb amputation",
+      "details": {
+        "ambulance_id": "AMB-TRAUMA-04",
+        "eta_minutes": 8,
+        "patient_info": {
+          "name": "Amputation case",
+          "age": 45,
+          "condition": "Traumatic limb amputation",
+          "severity": "Critical",
+          "contact": "+91-108",
+          "pickup_location": "Train derailment site - 2km"
+        }
+      }
+    },
+    {
+      "timestamp": "2026-02-01T05:55:40.546866",
+      "action": "PRECLEARANCE_INITIATED",
+      "reason": "Pre-clearance started for ambulance AMB-TRAUMA-04. Bed: GEN-02, Doctor: D001",
+      "details": {
+        "ambulance_id": "AMB-TRAUMA-04",
+        "steps": [
+          {
+            "action": "BED_TYPE_DETERMINED",
+            "bed_type": "General",
+            "reason": "Based on condition: traumatic limb amputation, SpO2: 95"
+          },
+          {
+            "action": "BED_RESERVED",
+            "bed_id": "GEN-02",
+            "method": "direct"
+          },
+          {
+            "action": "DOCTOR_ASSIGNED",
+            "doctor_id": "D001",
+            "doctor_name": "Dr. Sharma",
+            "specialization": "Cardiology"
+          },
+          {
+            "action": "NURSE_ASSIGNED",
+            "nurse_id": "N001",
+            "nurse_name": "Nurse Priya"
+          },
+          {
+            "action": "EQUIPMENT_PREPARED",
+            "items": [
+              "Vital signs monitor",
+              "IV stand and supplies",
+              "Oxygen supply",
+              "Trauma kit",
+              "Blood products on standby",
+              "Surgical instruments",
+              "C-spine collar"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "timestamp": "2026-02-01T05:55:42.607196",
+      "action": "AMBULANCE_REGISTERED",
+      "reason": "Ambulance AMB-MULTI-01 registered. ETA: 12 min. Patient: Multiple victims - 3 patients - varying injuries",
+      "details": {
+        "ambulance_id": "AMB-MULTI-01",
+        "eta_minutes": 12,
+        "patient_info": {
+          "name": "Multiple victims",
+          "age": 0,
+          "condition": "3 patients - varying injuries",
+          "severity": "Serious",
+          "contact": "+91-108",
+          "pickup_location": "Train derailment site - 2km"
+        }
+      }
+    },
+    {
+      "timestamp": "2026-02-01T05:55:49.783297",
+      "action": "CCTV_FALL_DETECTED",
+      "reason": "\u26a0\ufe0f Fall Detected in Emergency Room. Confidence: 91%. Awaiting verification.",
+      "details": {
+        "alert_id": "CCTV-20260201055549-007",
+        "type": "Fall Detected",
+        "location": "ZONE-ER-1",
+        "zone_name": "Emergency Room",
+        "timestamp": "2026-02-01T05:55:49.783297",
+        "status": "Pending Verification",
+        "confidence": 0.9070486093332256,
+        "duration_seconds": 0.0,
+        "verified_by": null,
+        "assigned_nurse": null,
+        "resolution": ""
+      }
+    },
+    {
+      "timestamp": "2026-02-01T05:55:51.849569",
+      "action": "CCTV_EMERGENCY_CONFIRMED",
+      "reason": "\ud83d\udea8 EMERGENCY CONFIRMED: Fall Detected in Emergency Room. Verified by Security Control. Initiating response.",
+      "details": {
+        "alert_id": "CCTV-20260201055549-007",
+        "verified_by": "Security Control"
+      }
+    },
+    {
+      "timestamp": "2026-02-01T05:55:53.900835",
+      "action": "CCTV_PROLONGED_IMMOBILITY",
+      "reason": "\u26a0\ufe0f Prolonged Immobility in General Ward A. Confidence: 90%. Awaiting verification.",
+      "details": {
+        "alert_id": "CCTV-20260201055553-008",
+        "type": "Prolonged Immobility",
+        "location": "ZONE-WARD-1",
+        "zone_name": "General Ward A",
+        "timestamp": "2026-02-01T05:55:53.900835",
+        "status": "Pending Verification",
+        "confidence": 0.9,
+        "duration_seconds": 172,
+        "verified_by": null,
+        "assigned_nurse": null,
+        "resolution": ""
+      }
+    },
+    {
+      "timestamp": "2026-02-01T05:55:55.951178",
+      "action": "CCTV_EMERGENCY_CONFIRMED",
+      "reason": "\ud83d\udea8 EMERGENCY CONFIRMED: Prolonged Immobility in General Ward A. Verified by Security Control. Initiating response.",
+      "details": {
+        "alert_id": "CCTV-20260201055553-008",
+        "verified_by": "Security Control"
+      }
+    },
+    {
+      "timestamp": "2026-02-01T05:56:10.362928",
+      "action": "PATIENT_REPORT_INIT",
+      "reason": "\ud83d\udccb Daily report system initialized for Crush Injury Victim (ID: P-TRAUMA-001)",
+      "details": {}
+    },
+    {
+      "timestamp": "2026-02-01T05:56:12.428161",
+      "action": "PRESCRIPTION_UPLOADED",
+      "reason": "\ud83d\udccb Prescription RX-20260201-0010 uploaded for Crush Injury Victim by ER Staff",
+      "details": {}
+    },
+    {
+      "timestamp": "2026-02-01T05:56:12.436635",
+      "action": "PRESCRIPTION_SCANNED",
+      "reason": "\ud83d\udd0d Prescription RX-20260201-0010 scanned. Found 5 medicines.",
+      "details": {}
+    },
+    {
+      "timestamp": "2026-02-01T05:56:14.520068",
+      "action": "PRESCRIPTION_VERIFIED",
+      "reason": "\u2705 Prescription RX-20260201-0010 verified by Dr. Patel (Emergency). 5 medicine alerts scheduled.",
+      "details": {}
+    },
+    {
+      "timestamp": "2026-02-01T05:56:16.578605",
+      "action": "PATIENT_REPORT_INIT",
+      "reason": "\ud83d\udccb Daily report system initialized for Cardiac Arrest Patient (ID: P-CARDIAC-001)",
+      "details": {}
+    },
+    {
+      "timestamp": "2026-02-01T05:56:18.662779",
+      "action": "PRESCRIPTION_UPLOADED",
+      "reason": "\ud83d\udccb Prescription RX-20260201-0011 uploaded for Cardiac Arrest Patient by ER Staff",
+      "details": {}
+    },
+    {
+      "timestamp": "2026-02-01T05:56:18.667834",
+      "action": "PRESCRIPTION_SCANNED",
+      "reason": "\ud83d\udd0d Prescription RX-20260201-0011 scanned. Found 5 medicines.",
+      "details": {}
+    },
+    {
+      "timestamp": "2026-02-01T05:56:20.728926",
+      "action": "PRESCRIPTION_VERIFIED",
+      "reason": "\u2705 Prescription RX-20260201-0011 verified by Dr. Patel (Emergency). 5 medicine alerts scheduled.",
+      "details": {}
+    },
+    {
+      "timestamp": "2026-02-01T05:56:22.793199",
+      "action": "PATIENT_REPORT_INIT",
+      "reason": "\ud83d\udccb Daily report system initialized for Burn Victim (ID: P-BURN-001)",
+      "details": {}
+    },
+    {
+      "timestamp": "2026-02-01T05:56:24.860667",
+      "action": "PRESCRIPTION_UPLOADED",
+      "reason": "\ud83d\udccb Prescription RX-20260201-0012 uploaded for Burn Victim by ER Staff",
+      "details": {}
+    },
+    {
+      "timestamp": "2026-02-01T05:56:24.866526",
+      "action": "PRESCRIPTION_SCANNED",
+      "reason": "\ud83d\udd0d Prescription RX-20260201-0012 scanned. Found 5 medicines.",
+      "details": {}
+    },
+    {
+      "timestamp": "2026-02-01T05:56:26.933701",
+      "action": "PRESCRIPTION_VERIFIED",
+      "reason": "\u2705 Prescription RX-20260201-0012 verified by Dr. Patel (Emergency). 5 medicine alerts scheduled.",
+      "details": {}
+    },
+    {
+      "timestamp": "2026-02-01T05:56:32.075546",
+      "action": "DIRECT_ASSIGN",
+      "reason": "Bed available, direct assignment to ICU-03",
+      "details": {
+        "patient_id": "P-055632",
+        "patient_name": "Trauma Patient 1",
+        "bed_id": "ICU-03",
+        "bed_type": "ICU"
+      }
+    },
+    {
+      "timestamp": "2026-02-01T05:56:32.096038",
+      "action": "DOCTOR_ASSIGNED",
+      "reason": "Dr. Dr. Sharma (Cardiology) assigned to Trauma Patient 1",
+      "details": {
+        "doctor_id": "D001",
+        "patient_id": "P-055632",
+        "doctor_patients": 2,
+        "hours_worked": 0.028625793611111113
+      }
+    },
+    {
+      "timestamp": "2026-02-01T05:56:32.121103",
+      "action": "NURSE_ASSIGNED",
+      "reason": "Nurse Nurse Anita assigned to Trauma Patient 1",
+      "details": {
+        "nurse_id": "N002",
+        "patient_id": "P-055632",
+        "nurse_patients": 2
+      }
+    },
+    {
+      "timestamp": "2026-02-01T05:56:32.137062",
+      "action": "PATIENT_ADMITTED",
+      "reason": "New patient Trauma Patient 1 admitted with priority 1 (\ud83d\udd34 RESUSCITATION)",
+      "details": {
+        "patient_id": "P-055632",
+        "name": "Trauma Patient 1",
+        "priority": 1,
+        "diagnosis": "Multiple fractures, internal bleeding",
+        "spo2": 88.0,
+        "heart_rate": 130,
+        "bed": "ICU-03",
+        "doctor": "Dr. Sharma"
+      }
+    },
+    {
+      "timestamp": "2026-02-01T05:56:34.206898",
+      "action": "SWAP_FAILED",
+      "reason": "No stable patients available for swap",
+      "details": {
+        "patient_id": "P-055634",
+        "required_type": "ICU"
+      }
+    },
+    {
+      "timestamp": "2026-02-01T05:56:34.212915",
+      "action": "DOCTOR_ASSIGNED",
+      "reason": "Dr. Dr. Patel (Emergency) assigned to Trauma Patient 2",
+      "details": {
+        "doctor_id": "D002",
+        "patient_id": "P-055634",
+        "doctor_patients": 2,
+        "hours_worked": 0.029210293611111108
+      }
+    },
+    {
+      "timestamp": "2026-02-01T05:56:34.229960",
+      "action": "NURSE_ASSIGNED",
+      "reason": "Nurse Nurse Priya assigned to Trauma Patient 2",
+      "details": {
+        "nurse_id": "N001",
+        "patient_id": "P-055634",
+        "nurse_patients": 3
+      }
+    },
+    {
+      "timestamp": "2026-02-01T05:56:34.243052",
+      "action": "PATIENT_ADMITTED",
+      "reason": "New patient Trauma Patient 2 admitted with priority 1 (\ud83d\udd34 RESUSCITATION)",
+      "details": {
+        "patient_id": "P-055634",
+        "name": "Trauma Patient 2",
+        "priority": 1,
+        "diagnosis": "Severe head injury",
+        "spo2": 90.0,
+        "heart_rate": 55,
+        "bed": null,
+        "doctor": "Dr. Patel"
+      }
+    },
+    {
+      "timestamp": "2026-02-01T05:56:36.318138",
+      "action": "SWAP_FAILED",
+      "reason": "No stable patients available for swap",
+      "details": {
+        "patient_id": "P-055636",
+        "required_type": "ICU"
+      }
+    },
+    {
+      "timestamp": "2026-02-01T05:56:36.324890",
+      "action": "DOCTOR_ASSIGNED",
+      "reason": "Dr. Dr. Kumar (Pulmonology) assigned to Burn Victim 1",
+      "details": {
+        "doctor_id": "D003",
+        "patient_id": "P-055636",
+        "doctor_patients": 2,
+        "hours_worked": 0.029793116388888888
+      }
+    },
+    {
+      "timestamp": "2026-02-01T05:56:36.338957",
+      "action": "NURSE_ASSIGNED",
+      "reason": "Nurse Nurse Anita assigned to Burn Victim 1",
+      "details": {
+        "nurse_id": "N002",
+        "patient_id": "P-055636",
+        "nurse_patients": 3
+      }
+    },
+    {
+      "timestamp": "2026-02-01T05:56:36.352899",
+      "action": "PATIENT_ADMITTED",
+      "reason": "New patient Burn Victim 1 admitted with priority 1 (\ud83d\udd34 RESUSCITATION)",
+      "details": {
+        "patient_id": "P-055636",
+        "name": "Burn Victim 1",
+        "priority": 1,
+        "diagnosis": "40% burns",
+        "spo2": 85.0,
+        "heart_rate": 140,
+        "bed": null,
+        "doctor": "Dr. Kumar"
+      }
+    },
+    {
+      "timestamp": "2026-02-01T05:56:38.415855",
+      "action": "SWAP_FAILED",
+      "reason": "No stable patients available for swap",
+      "details": {
+        "patient_id": "P-055638",
+        "required_type": "ICU"
+      }
+    },
+    {
+      "timestamp": "2026-02-01T05:56:38.421853",
+      "action": "DOCTOR_ASSIGNED",
+      "reason": "Dr. Dr. Sharma (Cardiology) assigned to Cardiac Patient 1",
+      "details": {
+        "doctor_id": "D001",
+        "patient_id": "P-055638",
+        "doctor_patients": 3,
+        "hours_worked": 0.03038296444444444
+      }
+    },
+    {
+      "timestamp": "2026-02-01T05:56:38.438333",
+      "action": "NURSE_ASSIGNED",
+      "reason": "Nurse Nurse Priya assigned to Cardiac Patient 1",
+      "details": {
+        "nurse_id": "N001",
+        "patient_id": "P-055638",
+        "nurse_patients": 4
+      }
+    },
+    {
+      "timestamp": "2026-02-01T05:56:38.450989",
+      "action": "PATIENT_ADMITTED",
+      "reason": "New patient Cardiac Patient 1 admitted with priority 1 (\ud83d\udd34 RESUSCITATION)",
+      "details": {
+        "patient_id": "P-055638",
+        "name": "Cardiac Patient 1",
+        "priority": 1,
+        "diagnosis": "Post-cardiac arrest",
+        "spo2": 92.0,
+        "heart_rate": 45,
+        "bed": null,
+        "doctor": "Dr. Sharma"
+      }
+    },
+    {
+      "timestamp": "2026-02-01T05:56:40.535975",
+      "action": "DOCTOR_ASSIGNED",
+      "reason": "Dr. Dr. Patel (Emergency) assigned to Spinal Patient 1",
+      "details": {
+        "doctor_id": "D002",
+        "patient_id": "P-055640",
+        "doctor_patients": 3,
+        "hours_worked": 0.030966699166666667
+      }
+    },
+    {
+      "timestamp": "2026-02-01T05:56:40.547159",
+      "action": "NURSE_ASSIGNED",
+      "reason": "Nurse Nurse Anita assigned to Spinal Patient 1",
+      "details": {
+        "nurse_id": "N002",
+        "patient_id": "P-055640",
+        "nurse_patients": 4
+      }
+    },
+    {
+      "timestamp": "2026-02-01T05:56:40.561881",
+      "action": "PATIENT_ADMITTED",
+      "reason": "New patient Spinal Patient 1 admitted with priority 2 (\ud83d\udfe0 EMERGENCY)",
+      "details": {
+        "patient_id": "P-055640",
+        "name": "Spinal Patient 1",
+        "priority": 2,
+        "diagnosis": "Spinal cord injury",
+        "spo2": 95.0,
+        "heart_rate": 100,
+        "bed": "ER-01",
+        "doctor": "Dr. Patel"
+      }
+    },
+    {
+      "timestamp": "2026-02-01T05:56:42.653409",
+      "action": "SWAP_EXECUTED",
+      "reason": "ICU full. Moved Spinal Patient 1 (Stability: 65/100) to General to accommodate critical patient Pediatric Patient 1 (SpO2: 86.0%, HR: 150)",
+      "details": {
+        "swapped_out_patient": "P-055640",
+        "swapped_out_name": "Spinal Patient 1",
+        "swapped_out_stability": 65.0,
+        "swapped_in_patient": "P-055642",
+        "swapped_in_name": "Pediatric Patient 1",
+        "freed_bed": "ER-01",
+        "downgrade_bed": "GEN-02",
+        "incoming_spo2": 86.0,
+        "incoming_hr": 150
+      }
+    },
+    {
+      "timestamp": "2026-02-01T05:56:42.659864",
+      "action": "DOCTOR_ASSIGNED",
+      "reason": "Dr. Dr. Kumar (Pulmonology) assigned to Pediatric Patient 1",
+      "details": {
+        "doctor_id": "D003",
+        "patient_id": "P-055642",
+        "doctor_patients": 3,
+        "hours_worked": 0.03155283138888889
+      }
+    },
+    {
+      "timestamp": "2026-02-01T05:56:42.671036",
+      "action": "NURSE_ASSIGNED",
+      "reason": "Nurse Nurse Priya assigned to Pediatric Patient 1",
+      "details": {
+        "nurse_id": "N001",
+        "patient_id": "P-055642",
+        "nurse_patients": 5
+      }
+    },
+    {
+      "timestamp": "2026-02-01T05:56:42.683552",
+      "action": "PATIENT_ADMITTED",
+      "reason": "New patient Pediatric Patient 1 admitted with priority 1 (\ud83d\udd34 RESUSCITATION)",
+      "details": {
+        "patient_id": "P-055642",
+        "name": "Pediatric Patient 1",
+        "priority": 1,
+        "diagnosis": "Multiple injuries, shock",
+        "spo2": 86.0,
+        "heart_rate": 150,
+        "bed": "ER-01",
+        "doctor": "Dr. Kumar"
+      }
+    },
+    {
+      "timestamp": "2026-02-01T05:56:47.811428",
+      "action": "AGENT_SWAP_BEDS",
+      "reason": "VitalFlow detected that patient requires ICU care based on critical vitals. The system identified a stable patient who can be safely moved to general ward, freeing the ICU bed. This decision follows the Tetris protocol for optimal bed utilization while prioritizing patient safety.",
+      "details": {
+        "decision_id": "DEC-20260201-0010",
+        "timestamp": "2026-02-01T05:56:47.811428",
+        "action": "Swap Beds",
+        "severity": "Critical",
+        "target": "P-055642",
+        "reason": "Patient Pediatric Patient 1 is CRITICAL (SpO2: 86.0%) but in Emergency bed. ICU transfer required.",
+        "details": {
+          "patient_id": "P-055642",
+          "current_bed": "ER-01",
+          "required_bed_type": "ICU",
+          "spo2": 86.0,
+          "heart_rate": 150
+        },
+        "requires_approval": true,
+        "executed": false,
+        "outcome": "Queued for doctor/admin approval"
+      }
+    },
+    {
+      "timestamp": "2026-02-01T05:56:50.393053",
+      "action": "AGENT_SWAP_BEDS",
+      "reason": "VitalFlow detected that patient requires ICU care based on critical vitals. The system identified a stable patient who can be safely moved to general ward, freeing the ICU bed. This decision follows the Tetris protocol for optimal bed utilization while prioritizing patient safety.",
+      "details": {
+        "decision_id": "DEC-20260201-0011",
+        "timestamp": "2026-02-01T05:56:50.393053",
+        "action": "Swap Beds",
+        "severity": "Critical",
+        "target": "P-055642",
+        "reason": "Patient Pediatric Patient 1 is CRITICAL (SpO2: 86.0%) but in Emergency bed. ICU transfer required.",
+        "details": {
+          "patient_id": "P-055642",
+          "current_bed": "ER-01",
+          "required_bed_type": "ICU",
+          "spo2": 86.0,
+          "heart_rate": 150
+        },
+        "requires_approval": true,
+        "executed": false,
+        "outcome": "Queued for doctor/admin approval"
+      }
+    },
+    {
+      "timestamp": "2026-02-01T05:56:52.962870",
+      "action": "AGENT_SWAP_BEDS",
+      "reason": "VitalFlow detected that patient requires ICU care based on critical vitals. The system identified a stable patient who can be safely moved to general ward, freeing the ICU bed. This decision follows the Tetris protocol for optimal bed utilization while prioritizing patient safety.",
+      "details": {
+        "decision_id": "DEC-20260201-0012",
+        "timestamp": "2026-02-01T05:56:52.962870",
+        "action": "Swap Beds",
+        "severity": "Critical",
+        "target": "P-055642",
+        "reason": "Patient Pediatric Patient 1 is CRITICAL (SpO2: 86.0%) but in Emergency bed. ICU transfer required.",
+        "details": {
+          "patient_id": "P-055642",
+          "current_bed": "ER-01",
+          "required_bed_type": "ICU",
+          "spo2": 86.0,
+          "heart_rate": 150
+        },
+        "requires_approval": true,
+        "executed": false,
+        "outcome": "Queued for doctor/admin approval"
+      }
+    },
+    {
+      "timestamp": "2026-02-01T05:57:00.662698",
+      "action": "ALERT_SENT",
+      "reason": "\ud83d\udcf1 Alert sent to Dr. Singh (+91-9876543005): \ud83d\udd34 URGENT: Patient Baby Arjun (Premature - NICU) became CRITICAL before your scheduled visit. Location: NICU, Bed NICU-01. Condition: Apnea episode - needs immediate attention. Please come immediately.",
+      "details": {}
+    },
+    {
+      "timestamp": "2026-02-01T05:57:00.671241",
+      "action": "DOCTOR_EMERGENCY_ALERT",
+      "reason": "\ud83d\udea8 CRITICAL ALERT to Dr. Singh: \ud83d\udd34 URGENT: Patient Baby Arjun (Premature - NICU) became CRITICAL before your scheduled visit. Location: NICU, Bed NICU-01. Condition: Apnea episode - needs immediate attention. Please come immediately.",
+      "details": {}
+    },
+    {
+      "timestamp": "2026-02-01T05:57:00.677529",
+      "action": "ALERT_ESCALATED",
+      "reason": "\u2b06\ufe0f Alert escalated from Dr. Reddy to Dr. Singh for Baby Arjun (Premature - NICU)",
+      "details": {}
+    },
+    {
+      "timestamp": "2026-02-01T05:57:02.736081",
+      "action": "ALERT_ACKNOWLEDGED",
+      "reason": "\u2705 Dr. Sharma acknowledged alert for Mr. Venkatesh (Post-cardiac surgery). Response: Returning immediately despite leave. ETA: 26 min",
+      "details": {}
+    },
+    {
+      "timestamp": "2026-02-01T05:57:04.819426",
+      "action": "ALERT_ACKNOWLEDGED",
+      "reason": "\u2705 Dr. Kumar acknowledged alert for Mrs. Lakshmi (Respiratory failure). Response: Returning immediately despite leave. ETA: 21 min",
+      "details": {}
+    }
+  ],
+  "stats": {
+    "total_beds": 9,
+    "occupied_beds": 6,
+    "available_beds": 3,
+    "occupancy_rate": 66.66666666666666,
+    "by_bed_type": {
+      "ICU": {
+        "total": 3,
+        "occupied": 3,
+        "available": 0
+      },
+      "Emergency": {
+        "total": 2,
+        "occupied": 1,
+        "available": 1
+      },
+      "General": {
+        "total": 4,
+        "occupied": 2,
+        "available": 2
+      },
+      "Pediatric": {
+        "total": 0,
+        "occupied": 0,
+        "available": 0
+      },
+      "Maternity": {
+        "total": 0,
+        "occupied": 0,
+        "available": 0
+      }
+    },
+    "patients_by_status": {
+      "Critical": 6,
+      "Serious": 2,
+      "Stable": 1,
+      "Recovering": 0,
+      "Discharged": 0
+    },
+    "total_patients": 9,
+    "total_staff": 5
+  }
+}
