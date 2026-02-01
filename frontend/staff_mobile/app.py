@@ -12,13 +12,20 @@ import os
 # Add parent directories to path for imports
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))))
 
-# Page configuration - MUST be first Streamlit command
-st.set_page_config(
-    page_title="VitalFlow Staff",
-    page_icon="🏥",
-    layout="centered",
-    initial_sidebar_state="collapsed"
-)
+# Page config - only set if running standalone (not imported from main.py)
+def _set_page_config():
+    try:
+        st.set_page_config(
+            page_title="VitalFlow Staff",
+            page_icon="🏥",
+            layout="centered",
+            initial_sidebar_state="collapsed"
+        )
+    except st.errors.StreamlitAPIException:
+        pass  # Already set by main.py
+
+if __name__ == "__main__":
+    _set_page_config()
 
 # UI STYLE ONLY - VitalFlow Professional Healthcare Theme
 st.markdown("""
@@ -488,12 +495,27 @@ def render_role_selector():
 
 
 def render_back_button():
-    """Render back to role selection button"""
-    if st.button("← Back to Role Selection", key="back_btn"):
-        st.session_state.selected_role = None
-        st.session_state.staff_id = None
-        st.session_state.is_on_duty = False
-        st.rerun()
+    """Render back to role selection or logout button"""
+    col1, col2 = st.columns([1, 1])
+    with col1:
+        if st.button("← Back", key="back_btn"):
+            st.session_state.selected_role = None
+            st.session_state.staff_id = None
+            st.session_state.is_on_duty = False
+            st.rerun()
+    with col2:
+        if st.button("🚪 Logout", key="logout_btn"):
+            # Clear all session state for full logout
+            st.session_state.authenticated = False
+            st.session_state.user_email = None
+            st.session_state.user_role = None
+            st.session_state.user_name = None
+            st.session_state.selected_role = None
+            st.session_state.staff_id = None
+            st.session_state.staff_name = None
+            st.session_state.is_on_duty = False
+            st.session_state.shift_start = None
+            st.rerun()
 
 
 def main():

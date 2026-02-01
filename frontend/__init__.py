@@ -1,0 +1,3 @@
+"""
+VitalFlow AI - Frontend Package
+"""

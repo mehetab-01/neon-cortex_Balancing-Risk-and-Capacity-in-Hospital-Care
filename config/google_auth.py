@@ -53,6 +53,15 @@ import os
 from dataclasses import dataclass
 from typing import Optional
 
+# Load environment variables from .env file
+try:
+    from dotenv import load_dotenv
+    # Load from project root
+    env_path = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), '.env')
+    load_dotenv(env_path)
+except ImportError:
+    pass  # python-dotenv not installed
+
 @dataclass
 class GoogleOAuthConfig:
     """Google OAuth Configuration"""

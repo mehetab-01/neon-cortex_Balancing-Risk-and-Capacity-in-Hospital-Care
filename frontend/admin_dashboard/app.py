@@ -12,13 +12,20 @@ import time
 # Setup path
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))))
 
-# Page config - MUST be first Streamlit command
-st.set_page_config(
-    page_title="VitalFlow Command",
-    page_icon="🏥",
-    layout="wide",
-    initial_sidebar_state="expanded"
-)
+# Page config - only set if running standalone (not imported from main.py)
+def _set_page_config():
+    try:
+        st.set_page_config(
+            page_title="VitalFlow Command",
+            page_icon="🏥",
+            layout="wide",
+            initial_sidebar_state="expanded"
+        )
+    except st.errors.StreamlitAPIException:
+        pass  # Already set by main.py
+
+if __name__ == "__main__":
+    _set_page_config()
 
 # Import services
 from shared.data_service import (
@@ -597,12 +604,176 @@ st.markdown("""
         font-weight: 500 !important;
         color: var(--text-dark) !important;
     }
-    
+
+    .streamlit-expanderContent {
+        background: var(--cream-light) !important;
+        color: var(--text-dark) !important;
+    }
+
+    /* Force dark text on all Streamlit components */
+    [data-testid="stMetricValue"] {
+        color: #2d2a26 !important;
+    }
+
+    [data-testid="stMetricLabel"] {
+        color: #6b6560 !important;
+    }
+
+    [data-testid="stMetricDelta"] {
+        color: inherit !important;
+    }
+
+    [data-testid="stExpander"] {
+        background: var(--cream-light) !important;
+    }
+
+    [data-testid="stExpander"] p,
+    [data-testid="stExpander"] span,
+    [data-testid="stExpander"] div {
+        color: #2d2a26 !important;
+    }
+
+    /* Fix radio button text */
+    .stRadio label {
+        color: #2d2a26 !important;
+    }
+
+    .stRadio span {
+        color: #2d2a26 !important;
+    }
+
+    /* Fix selectbox text */
+    .stSelectbox label,
+    .stSelectbox span {
+        color: #2d2a26 !important;
+    }
+
+    [data-testid="stSelectbox"] div {
+        color: #2d2a26 !important;
+    }
+
+    /* Fix markdown text */
+    .stMarkdown p,
+    .stMarkdown span,
+    .stMarkdown div,
+    .stMarkdown strong {
+        color: #2d2a26 !important;
+    }
+
+    /* Patient card specific - ensure visibility */
+    .patient-card,
+    .patient-card .info,
+    .patient-card .info .name,
+    .patient-card .info .meta,
+    .patient-card .vitals,
+    .patient-card .vital,
+    .patient-card .vital .value,
+    .patient-card .vital .unit {
+        color: #2d2a26 !important;
+    }
+
+    .patient-card .info .meta {
+        color: #6b6560 !important;
+    }
+
+    .patient-card .vital .unit {
+        color: #9a948c !important;
+    }
+
+    /* Decision card specific */
+    .decision-card,
+    .decision-card .header,
+    .decision-card .header .action,
+    .decision-card .reason {
+        color: #2d2a26 !important;
+    }
+
+    .decision-card .header .time {
+        color: #9a948c !important;
+    }
+
+    .decision-card .reason {
+        color: #6b6560 !important;
+    }
+
+    /* All text elements within main content */
+    .main p, .main span, .main div, .main label, .main strong {
+        color: #2d2a26;
+    }
+
+    /* Hospital mini card */
+    .hospital-mini,
+    .hospital-mini .name,
+    .hospital-mini .stats span,
+    .hospital-mini .stats strong {
+        color: #2d2a26 !important;
+    }
+
+    .hospital-mini .address {
+        color: #9a948c !important;
+    }
+
+    /* Stat box */
+    .stat-box .number,
+    .stat-box .label {
+        color: #2d2a26 !important;
+    }
+
     /* Responsive */
     @media (max-width: 768px) {
         .main .block-container { padding: 1rem; }
         .metric-card .value { font-size: 1.5rem; }
         .bed-grid { grid-template-columns: repeat(auto-fill, minmax(60px, 1fr)); }
+    }
+
+    /* Global text visibility override - ensures all text is dark */
+    .stApp, .stApp * {
+        --tw-text-opacity: 1;
+    }
+
+    /* Override any white text from dark themes */
+    [data-testid="stAppViewContainer"] p,
+    [data-testid="stAppViewContainer"] span,
+    [data-testid="stAppViewContainer"] div,
+    [data-testid="stAppViewContainer"] label,
+    [data-testid="stAppViewContainer"] h1,
+    [data-testid="stAppViewContainer"] h2,
+    [data-testid="stAppViewContainer"] h3 {
+        color: #2d2a26;
+    }
+
+    /* Keep specific colored elements with their colors */
+    .chip-critical { color: var(--error) !important; }
+    .chip-serious { color: var(--warning) !important; }
+    .chip-stable { color: var(--success) !important; }
+    .chip-recovering { color: var(--info) !important; }
+
+    /* Preserve button text colors */
+    .stButton button {
+        color: white !important;
+    }
+
+    .stButton > button[kind="secondary"] {
+        color: #2d2a26 !important;
+    }
+
+    /* Keep bed cell text white on colored backgrounds */
+    .bed-cell.bed-critical,
+    .bed-cell.bed-serious,
+    .bed-cell.bed-stable,
+    .bed-cell.bed-recovering {
+        color: white !important;
+    }
+
+    /* Live indicator stays green */
+    .live-indicator {
+        color: #5a9a6e !important;
+    }
+
+    /* Alert box text stays red */
+    .alert-box .count,
+    .alert-box .label {
+        color: var(--error) !important;
     }
 </style>
 """, unsafe_allow_html=True)
@@ -779,6 +950,9 @@ def render_hospital_mini(hospital: dict):
 # ============================================
 # MAIN LAYOUT
 # ============================================
+
+# Initialize state
+init_state()
 
 # Load data
 data = load_data()
