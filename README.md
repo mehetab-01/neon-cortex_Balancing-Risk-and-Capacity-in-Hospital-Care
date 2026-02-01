@@ -1,188 +1,183 @@
 # VitalFlow AI - Intelligent Hospital Management System
 
-![VitalFlow Banner](https://img.shields.io/badge/VitalFlow-AI%20Hospital%20Command-blue?style=for-the-badge)
-![Python](https://img.shields.io/badge/Python-3.9+-green?style=flat-square)
-![Streamlit](https://img.shields.io/badge/Streamlit-1.28+-red?style=flat-square)
+[![Python](https://img.shields.io/badge/Python-3.9+-blue.svg)](https://www.python.org/downloads/)
+[![Streamlit](https://img.shields.io/badge/Streamlit-1.28+-red.svg)](https://streamlit.io/)
+[![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 
-## 🏥 Overview
+> An intelligent hospital command center providing real-time monitoring, bed management, and AI-driven decision support for hospital administrators and clinical staff.
 
-VitalFlow AI is an intelligent hospital command center that provides real-time monitoring, bed management, and AI-driven decision support for hospital administrators and staff.
+## Overview
 
-## 📁 Project Structure
+**VitalFlow AI** is designed to balance risk assessment and capacity management in hospital care through an integrated dashboard with visual analytics and intelligent recommendations. Built during a 10-hour hackathon, this project emphasizes rapid prototyping, visual impact, and clean architecture for seamless backend integration.
+
+## Features
+
+- **Real-Time Statistics Dashboard** - Live monitoring of hospital metrics and KPIs
+- **Visual Floor Map** - Color-coded patient status visualization for quick assessment
+- **Multi-Hospital Network Mapping** - Manage and monitor multiple facilities from a single interface
+- **AI Decision Support** - Intelligent recommendations with full transparency logging
+- **Modular Architecture** - Reusable components designed for scalability
+- **Multiple Data Source Modes** - Support for mock data, API integration, and JSON sources
+
+## Tech Stack
+
+| Technology | Purpose |
+|------------|---------|
+| Python 3.9+ | Core programming language |
+| Streamlit 1.28+ | Web framework for dashboard |
+| Pydantic | Data validation and models |
+| RESTful API | Backend communication |
+| WebSocket | Real-time updates |
+
+## Project Structure
 
 ```
-VitalFlow/
+neon-cortex_Balancing-Risk-and-Capacity-in-Hospital-Care/
 ├── frontend/
-│   ├── admin_dashboard/        # Admin/Dean Dashboard (Sayali)
-│   │   ├── app.py              # Main Streamlit entry
-│   │   ├── components/
-│   │   │   ├── floor_map.py    # Visual floor layout
-│   │   │   ├── city_map.py     # Multi-hospital view
-│   │   │   ├── patient_cards.py # Patient status cards
-│   │   │   ├── stats_panel.py  # Real-time statistics
-│   │   │   └── decision_log.py # AI decision explanations
-│   │   └── assets/
-│   │
-│   └── staff_mobile/           # Staff Mobile View (Aditya)
-│
+│   ├── admin_dashboard/      # Administrator/Dean dashboard interface
+│   └── staff_mobile/         # Mobile interface for clinical staff
 ├── backend/
-│   ├── core_logic/             # Core Business Logic (Rajat)
-│   └── ai_services/            # AI Services (Dhanshree)
-│
-├── shared/
-│   ├── models.py               # Pydantic data models
-│   ├── constants.py            # Configuration constants
-│   ├── mock_data.py            # Demo data generation
-│   └── __init__.py
-│
-├── simulation/                 # Demo Simulation (Mehetab)
-│
-├── requirements.txt
-└── README.md
+│   ├── core_logic/           # Business rules and workflows
+│   └── ai_services/          # Machine learning and decision support
+├── shared/                   # Reusable modules (models, constants, mock data)
+├── simulation/               # Demo and testing environment
+├── VitalFlow/                # Primary application code
+├── .devcontainer/            # Development environment configuration
+├── config/                   # Configuration files
+├── main.py                   # Application entry point
+├── requirements.txt          # Python dependencies
+├── run.sh                    # Startup script
+├── DASHBOARD_README.md       # Dashboard-specific documentation
+└── GOOGLE_AUTH_SETUP.md      # Authentication configuration guide
 ```
 
-## 🚀 Quick Start
+## Installation
 
-### 1. Install Dependencies
+### Prerequisites
 
-```bash
-pip install -r requirements.txt
+- Python 3.9 or higher
+- pip (Python package manager)
+- Git
+
+### Quick Start
+
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/mehetab-01/neon-cortex_Balancing-Risk-and-Capacity-in-Hospital-Care.git
+   cd neon-cortex_Balancing-Risk-and-Capacity-in-Hospital-Care
+   ```
+
+2. **Create a virtual environment** (recommended)
+   ```bash
+   python -m venv venv
+   source venv/bin/activate  # On Windows: venv\Scripts\activate
+   ```
+
+3. **Install dependencies**
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+4. **Run the application**
+   ```bash
+   # Using Python
+   python main.py
+
+   # Or using the startup script
+   ./run.sh
+   ```
+
+5. **Access the dashboard**
+
+   Open your browser and navigate to `http://localhost:8501`
+
+## Configuration
+
+The application supports multiple configuration modes:
+
+| Mode | Description |
+|------|-------------|
+| `mock` | Uses simulated data for demo purposes |
+| `api` | Connects to a live backend API |
+| `json` | Loads data from JSON files |
+
+Configuration files are located in the `config/` directory.
+
+## API Integration
+
+VitalFlow AI provides RESTful endpoints with WebSocket support for real-time updates. For detailed API contracts and integration guidelines, refer to the backend documentation.
+
+### Example API Endpoints
+
+```
+GET  /api/v1/patients          # Retrieve patient list
+GET  /api/v1/beds/status       # Get bed availability
+POST /api/v1/ai/recommend      # Get AI recommendations
+WS   /ws/realtime              # WebSocket for live updates
 ```
 
-### 2. Run Admin Dashboard
-
-```bash
-cd frontend/admin_dashboard
-streamlit run app.py
-```
-
-The dashboard will open at `http://localhost:8501`
-
-## 🔌 Backend Integration
-
-The frontend is designed with clean endpoints for easy backend integration.
-
-### Data Service Layer
-
-All data fetching goes through `shared/data_service.py`:
-
-```python
-from shared.data_service import (
-    get_hospital_data,      # GET /api/hospital/{id}
-    get_network_hospitals,  # GET /api/hospitals
-    get_patients,           # GET /api/hospital/{id}/patients
-    get_beds,               # GET /api/hospital/{id}/beds
-    get_staff,              # GET /api/hospital/{id}/staff
-    get_ai_decisions,       # GET /api/hospital/{id}/decisions
-    transfer_patient,       # POST /api/hospital/{id}/patient/transfer
-    swap_beds,              # POST /api/hospital/{id}/bed/swap
-    approve_decision,       # POST /api/decision/{id}/approve
-    set_data_source,        # Switch between mock/api/json
-    DataSource,
-)
-
-# Switch to real API
-set_data_source(DataSource.API)
-```
-
-### API Contract
-
-See `shared/api_contract.py` for the complete API specification including:
-- All REST endpoints with request/response schemas
-- WebSocket message types for real-time updates
-- Data model definitions
-- Example FastAPI implementation
-
-### Configuration
-
-Set environment variables or create `.env` file:
-
-```bash
-VITALFLOW_API_URL=http://localhost:8000/api
-VITALFLOW_WS_URL=ws://localhost:8000/ws
-VITALFLOW_API_KEY=your_api_key
-```
-
-### Data Source Modes
-
-| Mode | Description | Use Case |
-|------|-------------|----------|
-| `mock` | Generated fake data | Development, demos |
-| `api` | Real backend API | Production |
-| `json` | Shared JSON file | Backend testing |
-
-## ✨ Features
+## Usage
 
 ### Admin Dashboard
 
-- **📊 Real-time Statistics** - Live bed occupancy, patient status, staff availability
-- **🏥 Floor Map View** - Visual grid of beds with color-coded patient status
-- **👥 Patient Management** - Search, filter, and view patient details
-- **🗺️ Network Map** - Multi-hospital view with transfer capabilities
-- **🤖 AI Decision Log** - Transparent AI recommendations with explanations
+The admin dashboard provides hospital administrators with:
+- Overview of hospital capacity and occupancy
+- Risk assessment metrics
+- AI-driven recommendations for resource allocation
+- Historical data analysis and trends
 
-### Visual Indicators
+### Staff Mobile Interface
 
-| Status | Color | Meaning |
-|--------|-------|---------|
-| 🔴 | Red | Critical - Immediate attention required |
-| 🟠 | Orange | Serious - Close monitoring needed |
-| 🟢 | Green | Stable - Normal condition |
-| 🔵 | Blue | Recovering - Improving |
-| ⬜ | White | Empty bed |
+Clinical staff can access:
+- Patient status updates
+- Bed assignment notifications
+- Quick action items
+- Real-time alerts
 
-## 🛠️ Development
+## Development
 
-### Component Architecture
+### Setting Up Development Environment
 
-Each component is designed to be modular and reusable:
+1. Use the provided `.devcontainer/` configuration for VS Code Dev Containers
+2. Run tests from the `simulation/` directory
+3. Follow the coding standards outlined in the project
 
-```python
-# Import components
-from components.stats_panel import render_stats_panel
-from components.floor_map import render_floor_map
-from components.patient_cards import render_patient_list
-from components.city_map import render_city_map
-from components.decision_log import render_decision_log
+### Running in Development Mode
 
-# Use in your Streamlit app
-render_stats_panel(stats_data)
-render_floor_map(floors, patients)
+```bash
+streamlit run main.py --server.runOnSave true
 ```
 
-### Data Models
+## Team
 
-```python
-from shared.models import Patient, Bed, Hospital, PatientStatus
+Built by the **Neon Cortex** team with specialized roles:
 
-patient = Patient(
-    id="P1234",
-    name="John Doe",
-    age=45,
-    status=PatientStatus.STABLE,
-    spo2=98,
-    heart_rate=72,
-    ...
-)
-```
+- Frontend Development
+- Mobile Interface Design
+- Backend Logic
+- AI Services
+- Simulation & Demonstration
 
-## 🎯 Hackathon Notes
+## Contributing
 
-This project was built for a 10-hour hackathon. Key design decisions:
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
 
-1. **Mock Data First** - Realistic data generation for impressive demos
-2. **Modular Components** - Easy to extend and customize
-3. **Visual Impact** - Dark theme with color-coded status indicators
-4. **Fallback Support** - Works even without optional dependencies (folium)
+## License
 
-## 👥 Team
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-- **Sayali** - Admin Dashboard Frontend
-- **Aditya** - Staff Mobile View
-- **Rajat** - Core Backend Logic
-- **Dhanshree** - AI Services
-- **Mehetab** - Simulation & Demo
+## Acknowledgments
 
-## 📝 License
+- Built during a 10-hour hackathon
+- Designed with scalability and real-world hospital workflows in mind
+- Special thanks to all contributors and mentors
 
-MIT License - Built with ❤️ for healthcare innovation
+---
+
+<p align="center">
+  <strong>VitalFlow AI</strong> - Balancing Risk and Capacity in Hospital Care
+</p>
