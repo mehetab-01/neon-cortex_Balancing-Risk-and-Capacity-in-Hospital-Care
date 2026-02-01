@@ -1,0 +1,71 @@
+# VitalFlow - Git Ignore
+
+# Environment and Secrets (IMPORTANT - never commit these!)
+.env
+.env.local
+.env.production
+.streamlit/secrets.toml
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual Environment
+.venv/
+venv/
+ENV/
+env/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# Streamlit
+.streamlit/secrets.toml
+
+# Cache
+.cache/
+*.cache
+
+# Logs
+*.log
+logs/
+
+# Test output
+test_output.txt
+extreme_test_output.txt
+
+# Audio cache
+shared/audio_cache/*.mp3
+shared/audio_cache/*.wav
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Model files (large)
+*.pt
+*.pth
+*.onnx
+yolov8*.pt

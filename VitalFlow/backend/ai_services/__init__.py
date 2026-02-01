@@ -13,6 +13,16 @@ from .prompts import (
 from .medicine_ai import medicine_ai, MedicineAI
 from .voice_alerts import voice_service, VoiceAlertService
 from .cv_detector import bed_detector, BedDetector
+from .emergency_alerts import (
+    emergency_service,
+    EmergencyNotificationService,
+    EmergencyType,
+    EmergencyAlert,
+    trigger_code_blue,
+    trigger_fall_alert,
+    trigger_critical_vitals,
+    announce_emergency
+)
 
 __all__ = [
     # Prompts
@@ -28,5 +38,15 @@ __all__ = [
     "voice_service",
     "VoiceAlertService",
     "bed_detector",
-    "BedDetector"
+    "BedDetector",
+    
+    # Emergency Alerts
+    "emergency_service",
+    "EmergencyNotificationService",
+    "EmergencyType",
+    "EmergencyAlert",
+    "trigger_code_blue",
+    "trigger_fall_alert",
+    "trigger_critical_vitals",
+    "announce_emergency"
 ]

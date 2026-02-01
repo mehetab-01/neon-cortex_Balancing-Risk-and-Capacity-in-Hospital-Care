@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-02-01T05:57:04.819426",
+  "timestamp": "2026-02-01T08:57:08.414801",
   "patients": {
     "P001": {
       "id": "P001",
@@ -8,10 +8,10 @@
       "gender": "Unknown",
       "diagnosis": "Acute MI",
       "status": "Critical",
-      "spo2": 82.0,
-      "heart_rate": 150,
+      "spo2": 81.98,
+      "heart_rate": 137,
       "blood_pressure": "120/80",
-      "temperature": 98.6,
+      "temperature": 98.16,
       "bed_id": "ICU-01",
       "assigned_doctor_id": "D001",
       "assigned_nurse_id": "N001",
@@ -48,10 +48,10 @@
       "gender": "Unknown",
       "diagnosis": "Post-surgery",
       "status": "Stable",
-      "spo2": 96.0,
-      "heart_rate": 78,
+      "spo2": 93.0,
+      "heart_rate": 70,
       "blood_pressure": "120/80",
-      "temperature": 98.6,
+      "temperature": 97.0,
       "bed_id": "GEN-01",
       "assigned_doctor_id": "D003",
       "assigned_nurse_id": "N001",
@@ -346,101 +346,6 @@
     }
   },
   "decision_log": [
-    {
-      "timestamp": "2026-02-01T05:55:40.540775",
-      "action": "AMBULANCE_REGISTERED",
-      "reason": "Ambulance AMB-TRAUMA-04 registered. ETA: 8 min. Patient: Amputation case - Traumatic limb amputation",
-      "details": {
-        "ambulance_id": "AMB-TRAUMA-04",
-        "eta_minutes": 8,
-        "patient_info": {
-          "name": "Amputation case",
-          "age": 45,
-          "condition": "Traumatic limb amputation",
-          "severity": "Critical",
-          "contact": "+91-108",
-          "pickup_location": "Train derailment site - 2km"
-        }
-      }
-    },
-    {
-      "timestamp": "2026-02-01T05:55:40.546866",
-      "action": "PRECLEARANCE_INITIATED",
-      "reason": "Pre-clearance started for ambulance AMB-TRAUMA-04. Bed: GEN-02, Doctor: D001",
-      "details": {
-        "ambulance_id": "AMB-TRAUMA-04",
-        "steps": [
-          {
-            "action": "BED_TYPE_DETERMINED",
-            "bed_type": "General",
-            "reason": "Based on condition: traumatic limb amputation, SpO2: 95"
-          },
-          {
-            "action": "BED_RESERVED",
-            "bed_id": "GEN-02",
-            "method": "direct"
-          },
-          {
-            "action": "DOCTOR_ASSIGNED",
-            "doctor_id": "D001",
-            "doctor_name": "Dr. Sharma",
-            "specialization": "Cardiology"
-          },
-          {
-            "action": "NURSE_ASSIGNED",
-            "nurse_id": "N001",
-            "nurse_name": "Nurse Priya"
-          },
-          {
-            "action": "EQUIPMENT_PREPARED",
-            "items": [
-              "Vital signs monitor",
-              "IV stand and supplies",
-              "Oxygen supply",
-              "Trauma kit",
-              "Blood products on standby",
-              "Surgical instruments",
-              "C-spine collar"
-            ]
-          }
-        ]
-      }
-    },
-    {
-      "timestamp": "2026-02-01T05:55:42.607196",
-      "action": "AMBULANCE_REGISTERED",
-      "reason": "Ambulance AMB-MULTI-01 registered. ETA: 12 min. Patient: Multiple victims - 3 patients - varying injuries",
-      "details": {
-        "ambulance_id": "AMB-MULTI-01",
-        "eta_minutes": 12,
-        "patient_info": {
-          "name": "Multiple victims",
-          "age": 0,
-          "condition": "3 patients - varying injuries",
-          "severity": "Serious",
-          "contact": "+91-108",
-          "pickup_location": "Train derailment site - 2km"
-        }
-      }
-    },
-    {
-      "timestamp": "2026-02-01T05:55:49.783297",
-      "action": "CCTV_FALL_DETECTED",
-      "reason": "\u26a0\ufe0f Fall Detected in Emergency Room. Confidence: 91%. Awaiting verification.",
-      "details": {
-        "alert_id": "CCTV-20260201055549-007",
-        "type": "Fall Detected",
-        "location": "ZONE-ER-1",
-        "zone_name": "Emergency Room",
-        "timestamp": "2026-02-01T05:55:49.783297",
-        "status": "Pending Verification",
-        "confidence": 0.9070486093332256,
-        "duration_seconds": 0.0,
-        "verified_by": null,
-        "assigned_nurse": null,
-        "resolution": ""
-      }
-    },
     {
       "timestamp": "2026-02-01T05:55:51.849569",
       "action": "CCTV_EMERGENCY_CONFIRMED",
@@ -917,6 +822,41 @@
       "action": "ALERT_ACKNOWLEDGED",
       "reason": "\u2705 Dr. Kumar acknowledged alert for Mrs. Lakshmi (Respiratory failure). Response: Returning immediately despite leave. ETA: 21 min",
       "details": {}
+    },
+    {
+      "timestamp": "2026-02-01T08:17:34.345144",
+      "action": "SWAP_FAILED_APPROVED",
+      "reason": "Approved by doctor",
+      "details": {
+        "original_action": "SWAP_FAILED"
+      }
+    },
+    {
+      "timestamp": "2026-02-01T08:17:43.044845",
+      "action": "SWAP_EXECUTED_APPROVED",
+      "reason": "Approved by doctor",
+      "details": {
+        "original_action": "SWAP_EXECUTED"
+      }
+    },
+    {
+      "timestamp": "2026-02-01T08:17:47.194945",
+      "action": "AGENT_SWAP_BEDS_APPROVED",
+      "reason": "Approved by doctor",
+      "details": {
+        "original_action": "AGENT_SWAP_BEDS"
+      }
+    },
+    {
+      "timestamp": "2026-02-01T08:57:08.409797",
+      "action": "EMERGENCY_CODE_BLUE",
+      "reason": "Code Blue at Doctor Dr. Sharma: Cardiac arrest - immediate resuscitation required",
+      "details": {
+        "alert_id": "EMRG-AC3E4030",
+        "patient_id": null,
+        "phone": "108",
+        "timestamp": "2026-02-01T08:57:00.725188"
+      }
     }
   ],
   "stats": {
